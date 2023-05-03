@@ -1,4 +1,4 @@
-name: bedrock
+name: wordpress
 recipe: wordpress
 env_file:
   - .env
