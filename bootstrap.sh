@@ -1,7 +1,3 @@
-cp .env.example .env
-
-vendor/bin/wpsalts dotenv --clean >> .env
-
 lando start
 
 lando wp db create
