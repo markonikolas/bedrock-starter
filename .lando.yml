@@ -1,5 +1,7 @@
 name: bedrock
 recipe: wordpress
+env_file:
+  - .env
 config:
   php: 8.1 
   composer_version: 2-latest
@@ -7,13 +9,18 @@ config:
   database: mariadb
   xdebug: true
 
-proxy:
-  appserver:
-    - bedrock.lndo.site
+services:
+  theme:
+    type: node:18
+    command: cd web/app/themes/sage && yarn dev
+    build:
+      - cd web/app/themes/sage && yarn
+    overrides:
+      ports:
+        - 3000:3000
+        - 3001:3001
 
 tooling:
-  node:
-    service: theme
   yarn:
     service: theme
 
