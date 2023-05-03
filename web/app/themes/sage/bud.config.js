@@ -7,7 +7,11 @@
  * @typedef {import('@roots/bud').Bud} Bud
  * @param {Bud} app
  */
+import * as dotenv from 'dotenv';
+
 export default async (app) => {
+  dotenv.config();
+
   /**
    * Application entrypoints
    * @see {@link https://bud.js.org/docs/bud.entry/}
@@ -39,6 +43,6 @@ export default async (app) => {
       'index.php',
       'functions.php',
     ])
-    .proxy('http://bedrock.lndo.site')
+    .proxy(process.env.WP_HOME)
     .serve('http://0.0.0.0:3000');
 };

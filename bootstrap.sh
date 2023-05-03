@@ -1,7 +1,8 @@
-lando start
+cp .env.example .env
 
-lando wp db create
-
-unzip demo.sql.zip
-
-lando db-import demo.sql
+lando start && \
+    unzip demo.sql.zip && \
+    lando db-import demo.sql && \
+    lando composer install && \
+    cd web/app/themes/sage && \
+    lando composer install
