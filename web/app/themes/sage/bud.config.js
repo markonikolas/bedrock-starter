@@ -44,5 +44,5 @@ export default async (app) => {
       'functions.php',
     ])
     .proxy(process.env.WP_HOME)
-    .serve('https://0.0.0.0:3000');
+    .serve('http://0.0.0.0:3000');
 };
