@@ -6,13 +6,13 @@ This template is using [Bedrock](https://roots.io/bedrock), an open source proje
 
 This project uses [Sage](https://roots.io/sage/docs/) theme which is an advanced WordPress starter theme with Tailwind CSS and Laravel Blade support out of the box.
 
-### Instructions
+## Instructions
 
-#### Prerequisite
+### Prerequisite
 
 Make sure you have [Docker](https://docker.com/get-started) and [Lando](https://docs.lando.dev/getting-started/installation.html) installed on your system
 
-#### Environment setup
+### Environment setup
 
 After cloning this repository, from project root run
 
@@ -22,7 +22,13 @@ cp .env.example .env
 
 generate salts by pasting the variables from [roots](https://roots.io/salts.html) site
 
-#### Automated setup
+first stop all docker containers to avoid conflicts by running:
+
+```bash
+docker stop $(docker ps -qa)
+```
+
+### Automated setup
 
 change into root and run (might need to run sudo)
 
@@ -36,15 +42,9 @@ then start the development environment
 ./bootstrap.sh
 ```
 
-#### Manual setup
+### Manual setup
 
 if an automated setup fails for some reason or you don't trust shell scripts, you'll need to configure it manually
-
-first stop all docker containers by running:
-
-```bash
-docker stop $(docker ps -qa)
-```
 
 then start the projects' [lando](https://docs.lando.dev/) dev environment
 
@@ -64,6 +64,10 @@ and
 cd web/app/themes/sage
 
 lando composer install
+
+lando yarn
+
+lando yarn build
 ```
 
 respectively.

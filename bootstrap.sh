@@ -7,7 +7,9 @@ echo 'Installing project dependencies, please wait...' && \
 
 echo 'Installing theme dependencies, please wait...' && \
     cd web/app/themes/sage && \
-    lando composer install
+    lando composer install && \
+    lando yarn && \
+    lando yarn build
 
 sleep 1
 
@@ -22,6 +24,10 @@ lando db-import demo.zip
 
 sleep 1
 
+lando wp db check
+
 echo '---------------'
+echo '               '
 echo 'Setup complete'
+echo '               '
 echo '---------------'
