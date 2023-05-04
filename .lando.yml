@@ -12,9 +12,9 @@ config:
 services:
   theme:
     type: node:18
-    command: cd web/app/themes/sage && yarn dev
     build:
       - cd web/app/themes/sage && yarn
+    command: cd web/app/themes/sage && yarn dev
     overrides:
       ports:
         - 3000:3000

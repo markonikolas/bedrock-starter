@@ -1,7 +1,7 @@
 {
   "extends": "@roots/bud-typescript/tsconfig/tsconfig.json",
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": "./resources",
     "types": [
       "webpack/module"
     ]
