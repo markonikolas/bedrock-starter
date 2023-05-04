@@ -78,6 +78,10 @@ lando wp db create
 lando db-import demo.zip
 ```
 
+### Configuring certificates
+
+You can follow [this](https://docs.lando.dev/core/v3/security.html#trusting-the-ca) guide if you find browser warnings anoying, beware if you use firefox as it controls it's own store and it needs additional browser configuration.
+
 ---
 
 **NOTE:**

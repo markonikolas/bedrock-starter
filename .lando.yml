@@ -3,7 +3,7 @@ recipe: wordpress
 env_file:
   - .env
 config:
-  php: 8.1 
+  php: 8.1
   composer_version: 2-latest
   webroot: web
   database: mariadb
@@ -24,7 +24,7 @@ tooling:
   yarn:
     service: theme
 
-  'db-import <file>':
+  "db-import <file>":
     service: :host
     description: Imports a dump file into a database service
     cmd: /helpers/sql-import.sh
