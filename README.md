@@ -1,4 +1,6 @@
-# Bedrock starter template
+# Modern WordPress template
+
+![Laravel](https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white) ![WordPress](https://img.shields.io/badge/WordPress-%23117AC9.svg?style=for-the-badge&logo=WordPress&logoColor=white) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
 ## Introduction
 
@@ -14,15 +16,17 @@ Make sure you have [Docker](https://docker.com/get-started) and [Lando](https://
 
 ### Environment setup
 
-After cloning this repository, from project root run
+After cloning the repository, create .env from an .env.example
 
 ```bash
 cp .env.example .env
 ```
 
-generate salts by pasting the variables from [roots](https://roots.io/salts.html) site
+Generate salts by pasting the environment variables from [roots](https://roots.io/salts.html) website
 
-first stop all docker containers to avoid conflicts by running:
+### Setup
+
+First, stop all Docker containers to avoid conflicts
 
 ```bash
 docker stop $(docker ps -qa)
@@ -30,10 +34,10 @@ docker stop $(docker ps -qa)
 
 ### Automated setup
 
-change into root and run (might need to run sudo)
+Change into root and run (you might not need this step)
 
 ```bash
-chmod u+x ./bootstrap.sh
+sudo chmod u+x ./bootstrap.sh
 ```
 
 then start the development environment
@@ -44,9 +48,9 @@ then start the development environment
 
 ### Manual setup
 
-if an automated setup fails for some reason or you don't trust shell scripts, you'll need to configure it manually
+If an automated setup fails for some reason or you don't trust shell scripts, you'll need to start development environment manually
 
-then start the projects' [lando](https://docs.lando.dev/) dev environment
+First, start the projects' [lando](https://docs.lando.dev/) dev environment
 
 ```bash
 lando start
@@ -65,12 +69,15 @@ cd web/app/themes/sage
 
 lando composer install
 
-lando yarn
-
-lando yarn build
 ```
 
-respectively.
+Install and build node dependencies (might not need this step)
+
+```bash
+
+lando yarn
+lando yarn build
+```
 
 ### Load demo db
 
