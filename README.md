@@ -46,6 +46,10 @@ then start the development environment
 ./bootstrap.sh
 ```
 
+If the development environment is working correctly, you can skip to [configuring](#configuring-htaccess) .htaccess.
+
+---
+
 ### Manual setup
 
 If an automated setup fails for some reason or you don't trust shell scripts, you'll need to start development environment manually
@@ -86,8 +90,15 @@ Next you'll need to load demo database that's in projects' root directory, from 
 ```bash
 lando wp db create
 
-lando db-import demo.zip
+lando db-import demo.*
+
 ```
+
+---
+
+### Configuring htaccess
+
+In order for permalinks to work correctly you'll manually need to update .htaccess, go to [permalinks](https://wordpress.lndo.site/wp/wp-admin/options-permalink.php) admin page and save settings.
 
 ### Configuring certificates
 
