@@ -3,7 +3,7 @@
 @section('content')
     @include('partials.page-header')
 
-    @include('partials.notfound');
+    @include('partials.notfound')
 
     @hasposts
         @include('partials.content-search')
