@@ -6,26 +6,6 @@
 
 namespace App;
 
-use function Roots\bundle;
-
-/**
- * Register the theme assets.
- *
- * @return void
- */
-add_action('wp_enqueue_scripts', function () {
-    bundle('app')->enqueue();
-}, 100);
-
-/**
- * Register the theme assets with the block editor.
- *
- * @return void
- */
-add_action('enqueue_block_editor_assets', function () {
-    bundle('editor')->enqueue();
-}, 100);
-
 /**
  * Register the initial theme setup.
  *
@@ -38,14 +18,14 @@ add_action('after_setup_theme', function () {
      * @link https://roots.io/plugins/soil/
      */
     add_theme_support('soil', [
-        'clean-up', // Cleaner WordPress markup
-        'disable-rest-api', // Disable REST API
-        'disable-asset-versioning', // Remove asset versioning
-        'disable-trackbacks', // Disable trackbacks
-        'js-to-footer', // Move JS to footer
-        'nav-walker', // Clean up nav menu markup
-        'nice-search', // Redirect /?s=query to /search/query
-        'relative-urls', // Convert absolute URLs to relative URLs
+        'clean-up',
+        'disable-rest-api',
+        'disable-asset-versioning',
+        'disable-trackbacks',
+        'js-to-footer',
+        'nav-walker',
+        'nice-search',
+        'relative-urls',
     ]);
 
     /**
