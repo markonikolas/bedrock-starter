@@ -22,8 +22,7 @@
     "@roots/bud": "6.12.2",
     "@roots/bud-tailwindcss": "6.12.2",
     "@roots/bud-typescript": "^6.12.2",
-    "@roots/sage": "6.12.2",
-    "dotenv": "^16.0.3"
+    "@roots/sage": "6.12.2"
   },
   "dependencies": {
     "@wordpress/blocks": "^12.9.0"

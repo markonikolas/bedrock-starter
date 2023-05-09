@@ -92,11 +92,6 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/add_theme_support/#customize-selective-refresh-widgets
      */
     add_theme_support('customize-selective-refresh-widgets');
-
-    /**
-     * Removes default duotones before closing the body.
-    */
-    remove_action( 'wp_body_open', 'wp_global_styles_render_svg_filters' );
 }, 20);
 
 /**
