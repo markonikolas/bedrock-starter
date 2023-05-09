@@ -3,18 +3,11 @@
 @section('content')
     @include('partials.page-header')
 
-    @if (!have_posts())
-        <x-alert type="warning">
-            {!! __('Sorry, no results were found.', 'sage') !!}
-        </x-alert>
+    @include('partials.notfound')
 
-        {!! get_search_form(false) !!}
-    @endif
-
-    @while (have_posts())
-        @php(the_post())
+    @hasposts
         @includeFirst(['partials.content-' . get_post_type(), 'partials.content'])
-    @endwhile
+    @endhasposts
 
     {!! get_the_posts_navigation() !!}
 @endsection
