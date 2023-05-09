@@ -38,10 +38,14 @@ add_action('after_setup_theme', function () {
      * @link https://roots.io/plugins/soil/
      */
     add_theme_support('soil', [
-        'clean-up',
-        'nav-walker',
-        'nice-search',
-        'relative-urls',
+        'clean-up', // Cleaner WordPress markup
+        'disable-rest-api', // Disable REST API
+        'disable-asset-versioning', // Remove asset versioning
+        'disable-trackbacks', // Disable trackbacks
+        'js-to-footer', // Move JS to footer
+        'nav-walker', // Clean up nav menu markup
+        'nice-search', // Redirect /?s=query to /search/query
+        'relative-urls', // Convert absolute URLs to relative URLs
     ]);
 
     /**

@@ -28,3 +28,8 @@ wp-cli.local.yml
 
 # databases
 *.sql
+
+# whitelist
+
+!soil
+!bedrock-disallow-indexing
